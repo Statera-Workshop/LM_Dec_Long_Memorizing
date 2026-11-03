@@ -1,0 +1,73 @@
+{
+ "model": "memorizing",
+ "repo": "LM_2022_Memorizing-transformers-pytorch",
+ "target_repo": "LM_Dec_Long_Memorizing",
+ "category": "Long",
+ "upstream": "lucidrains/memorizing-transformers-pytorch (MIT)",
+ "unified": [
+  "segments of 128 inside each 512 window (upstream: 5 segments of 512); kNN layer 4, XL layers 5-6 with 128 memories; faiss-cpu instead of faiss-gpu"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-10-19 14:35:38",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 171.1,
+    "ms": 167.1
+   },
+   "infer": {
+    "peak_mb": 56.0,
+    "ms": 106.2
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 269.4,
+    "ms": 325.4
+   },
+   "infer": {
+    "peak_mb": 56.2,
+    "ms": 218.9
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 498.9,
+    "ms": 633.6
+   },
+   "infer": {
+    "peak_mb": 56.7,
+    "ms": 414.4
+   }
+  },
+  {
+   "len": 4096,
+   "train": {
+    "peak_mb": 958.0,
+    "ms": 1413.4
+   },
+   "infer": {
+    "peak_mb": 57.7,
+    "ms": 1005.5
+   }
+  },
+  {
+   "len": 8192,
+   "train": {
+    "peak_mb": 1876.2,
+    "ms": 2727.6
+   },
+   "infer": {
+    "peak_mb": 59.7,
+    "ms": 2172.4
+   }
+  }
+ ],
+ "seconds": 31.2
+}

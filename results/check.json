@@ -1,0 +1,38 @@
+{
+ "model": "memorizing",
+ "repo": "LM_2022_Memorizing-transformers-pytorch",
+ "target_repo": "LM_Dec_Long_Memorizing",
+ "category": "Long",
+ "upstream": "lucidrains/memorizing-transformers-pytorch (MIT)",
+ "unified": [
+  "segments of 128 inside each 512 window (upstream: 5 segments of 512); kNN layer 4, XL layers 5-6 with 128 memories; faiss-cpu instead of faiss-gpu"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "check",
+ "started": "2026-10-19 14:22:09",
+ "smoke": false,
+ "params": 16416008,
+ "causality": {
+  "causal": true,
+  "uses_input": true,
+  "worst_leak": 0.0,
+  "min_effect": 1.8954720497131348,
+  "logit_scale": 2.4946427808532716,
+  "length": 256,
+  "positions": [
+   17,
+   101,
+   200
+  ]
+ },
+ "data_checks": [
+  "enwik8 train bytes  90,000,000 expected  90,000,000 OK",
+  "enwik8 valid bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 test  bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 distinct byte values in first 10M train bytes: 200 (vocab 256)",
+  "recall L=512 random gap: 16 answers/sample, keys/values/distractors disjoint OK",
+  "recall L=512 max gap: 16 answers/sample, keys/values/distractors disjoint OK"
+ ],
+ "seconds": 2.5
+}

@@ -1,0 +1,78 @@
+{
+ "model": "memorizing",
+ "repo": "LM_2022_Memorizing-transformers-pytorch",
+ "target_repo": "LM_Dec_Long_Memorizing",
+ "category": "Long",
+ "upstream": "lucidrains/memorizing-transformers-pytorch (MIT)",
+ "unified": [
+  "segments of 128 inside each 512 window (upstream: 5 segments of 512); kNN layer 4, XL layers 5-6 with 128 memories; faiss-cpu instead of faiss-gpu"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm05",
+ "started": "2026-10-19 19:51:14",
+ "smoke": false,
+ "params": 16416008,
+ "micro_batch": null,
+ "steps": 3500,
+ "budget_steps": 6000,
+ "capped": true,
+ "batch": 32,
+ "train_len": 512,
+ "pairs": 16,
+ "bf16": true,
+ "minutes": 136.1,
+ "history": [
+  {
+   "step": 500,
+   "loss": 4.170212745666504,
+   "acc_train_len": 0.0166015625
+  },
+  {
+   "step": 1000,
+   "loss": 4.166194438934326,
+   "acc_train_len": 0.017578125
+  },
+  {
+   "step": 1500,
+   "loss": 4.163949489593506,
+   "acc_train_len": 0.013671875
+  },
+  {
+   "step": 2000,
+   "loss": 4.131153106689453,
+   "acc_train_len": 0.03759765625
+  },
+  {
+   "step": 2500,
+   "loss": 4.059586048126221,
+   "acc_train_len": 0.07177734375
+  },
+  {
+   "step": 3000,
+   "loss": 3.989074468612671,
+   "acc_train_len": 0.0888671875
+  },
+  {
+   "step": 3500,
+   "loss": 3.9060380458831787,
+   "acc_train_len": 0.10205078125
+  }
+ ],
+ "test": {
+  "512": {
+   "acc": 0.1005859375,
+   "answers": 8192
+  },
+  "1024": {
+   "acc": 0.0830078125,
+   "answers": 8192
+  },
+  "2048": {
+   "acc": 0.0596923828125,
+   "answers": 8192
+  }
+ },
+ "chance": 0.015625,
+ "seconds": 8171.3
+}

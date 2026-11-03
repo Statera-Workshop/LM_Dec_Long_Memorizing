@@ -1,0 +1,106 @@
+{
+ "model": "memorizing",
+ "repo": "LM_2022_Memorizing-transformers-pytorch",
+ "target_repo": "LM_Dec_Long_Memorizing",
+ "category": "Long",
+ "upstream": "lucidrains/memorizing-transformers-pytorch (MIT)",
+ "unified": [
+  "segments of 128 inside each 512 window (upstream: 5 segments of 512); kNN layer 4, XL layers 5-6 with 128 memories; faiss-cpu instead of faiss-gpu"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm05v3",
+ "started": "2026-10-27 12:03:51",
+ "smoke": false,
+ "levels": {
+  "4": {
+   "queries": 1,
+   "distinct": true,
+   "steps": 1574,
+   "capped": true,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 4.217013359069824,
+   "minutes": 70.8,
+   "history": [
+    {
+     "step": 500,
+     "loss": 4.1581597328186035,
+     "acc": 0.0
+    },
+    {
+     "step": 1000,
+     "loss": 4.178622245788574,
+     "acc": 0.015625
+    },
+    {
+     "step": 1500,
+     "loss": 4.19125509262085,
+     "acc": 0.046875
+    }
+   ],
+   "test": {
+    "512": {
+     "normal": 0.015625,
+     "keys": 0.015625,
+     "values": 0.015625,
+     "true_recall": 0.0
+    },
+    "2048": {
+     "normal": 0.0078125,
+     "keys": 0.01953125,
+     "values": 0.01953125,
+     "true_recall": -0.01171875
+    }
+   },
+   "value_set_baseline": 0.25,
+   "chance": 0.015625,
+   "micro_batch": null
+  },
+  "16": {
+   "queries": 4,
+   "distinct": true,
+   "steps": 1575,
+   "capped": true,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 4.182642459869385,
+   "minutes": 70.6,
+   "history": [
+    {
+     "step": 500,
+     "loss": 4.191251754760742,
+     "acc": 0.015625
+    },
+    {
+     "step": 1000,
+     "loss": 4.188529014587402,
+     "acc": 0.01953125
+    },
+    {
+     "step": 1500,
+     "loss": 4.202244758605957,
+     "acc": 0.01953125
+    }
+   ],
+   "test": {
+    "512": {
+     "normal": 0.01708984375,
+     "keys": 0.0126953125,
+     "values": 0.0126953125,
+     "true_recall": 0.00439453125
+    },
+    "2048": {
+     "normal": 0.013671875,
+     "keys": 0.01416015625,
+     "values": 0.01416015625,
+     "true_recall": -0.00048828125
+    }
+   },
+   "value_set_baseline": 0.0625,
+   "chance": 0.015625,
+   "micro_batch": null
+  }
+ },
+ "seconds": 8492.7
+}
