@@ -8,99 +8,169 @@
   "segments of 128 inside each 512 window (upstream: 5 segments of 512); kNN layer 4, XL layers 5-6 with 128 memories; faiss-cpu instead of faiss-gpu"
  ],
  "torch": "2.5.1+cu124",
- "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "gpu": "NVIDIA GeForce RTX 4090",
  "stage": "lm02",
- "started": "2026-10-20 15:59:30",
+ "started": "2026-11-24 15:20:45",
  "smoke": false,
  "params": 16416008,
  "micro_batch": null,
- "steps": 10734,
- "tokens": 87932928,
+ "steps": 20704,
+ "tokens": 169607168,
  "budget_tokens": 200000000,
  "capped": true,
  "bf16": true,
- "hours": 4.476,
- "valid_bpc": 1.7697700826192595,
- "test_bpc": 1.739843089530413,
+ "hours": 4.228,
+ "valid_bpc": 1.659416620563248,
+ "test_bpc": 1.6341259270339092,
  "valid_tokens": 4915200,
  "test_tokens": 4915200,
  "history": [
   {
    "step": 1000,
    "tokens": 8192000,
-   "train_bpc": 3.576013230820562,
-   "valid_bpc": 2.961549903744382,
-   "hours": 0.37225872841146257
+   "train_bpc": 3.5772723139157194,
+   "valid_bpc": 2.968926714312005,
+   "hours": 0.1886504437526067
   },
   {
    "step": 2000,
    "tokens": 16384000,
-   "train_bpc": 2.618779685210057,
-   "valid_bpc": 2.406803942952403,
-   "hours": 0.7525600497590171
+   "train_bpc": 2.6187353611533464,
+   "valid_bpc": 2.3982879193054654,
+   "hours": 0.3805364178286658
   },
   {
    "step": 3000,
    "tokens": 24576000,
-   "train_bpc": 2.234024720905506,
-   "valid_bpc": 2.1673012198089334,
-   "hours": 1.1333415456612905
+   "train_bpc": 2.2328091413378326,
+   "valid_bpc": 2.1655051327532595,
+   "hours": 0.5732383657164044
   },
   {
    "step": 4000,
    "tokens": 32768000,
-   "train_bpc": 2.0627280868232103,
-   "valid_bpc": 2.052424202566738,
-   "hours": 1.5096299621131686
+   "train_bpc": 2.0620734099252163,
+   "valid_bpc": 2.045861354928772,
+   "hours": 0.7667612091700235
   },
   {
    "step": 5000,
    "tokens": 40960000,
-   "train_bpc": 1.9653277443100958,
-   "valid_bpc": 1.9717581685745678,
-   "hours": 1.881588421927558
+   "train_bpc": 1.9630524009404822,
+   "valid_bpc": 1.9744120552177762,
+   "hours": 0.9611339361137814
   },
   {
    "step": 6000,
    "tokens": 49152000,
-   "train_bpc": 1.9005149503426384,
-   "valid_bpc": 1.9258982603560804,
-   "hours": 2.2553315787182915
+   "train_bpc": 1.898218941537697,
+   "valid_bpc": 1.9238496030190027,
+   "hours": 1.156241732901997
   },
   {
    "step": 7000,
    "tokens": 57344000,
-   "train_bpc": 1.8556177255032977,
-   "valid_bpc": 1.884333625722198,
-   "hours": 2.6286963716480467
+   "train_bpc": 1.8532469781977705,
+   "valid_bpc": 1.8847299029868367,
+   "hours": 1.3521014899015427
   },
   {
    "step": 8000,
    "tokens": 65536000,
-   "train_bpc": 1.8165575742920101,
-   "valid_bpc": 1.8591353778121995,
-   "hours": 3.0047549241781235
+   "train_bpc": 1.813902140664857,
+   "valid_bpc": 1.8556240183484927,
+   "hours": 1.5502920977274577
   },
   {
    "step": 9000,
    "tokens": 73728000,
-   "train_bpc": 1.7859451474295056,
-   "valid_bpc": 1.823895050879536,
-   "hours": 3.3770613329278096
+   "train_bpc": 1.7836174912370657,
+   "valid_bpc": 1.8253449351391964,
+   "hours": 1.7468671354982588
   },
   {
    "step": 10000,
    "tokens": 81920000,
-   "train_bpc": 1.7617815978819797,
-   "valid_bpc": 1.806528287510899,
-   "hours": 3.7512771508428786
+   "train_bpc": 1.7596468222962742,
+   "valid_bpc": 1.8053151459692838,
+   "hours": 1.940970890654458
   },
   {
-   "step": 10734,
-   "tokens": 87932928,
-   "train_bpc": 1.2770085689329291,
-   "valid_bpc": 1.797109392783115,
-   "hours": 4.036695201529397
+   "step": 11000,
+   "tokens": 90112000,
+   "train_bpc": 1.7355492450356453,
+   "valid_bpc": 1.787072078539792,
+   "hours": 2.1360070504082573
+  },
+  {
+   "step": 12000,
+   "tokens": 98304000,
+   "train_bpc": 1.7158711964171125,
+   "valid_bpc": 1.765370448600582,
+   "hours": 2.3302143342627417
+  },
+  {
+   "step": 13000,
+   "tokens": 106496000,
+   "train_bpc": 1.705733528405202,
+   "valid_bpc": 1.7564058899006278,
+   "hours": 2.524508695602417
+  },
+  {
+   "step": 14000,
+   "tokens": 114688000,
+   "train_bpc": 1.6914410644736861,
+   "valid_bpc": 1.7449288856692746,
+   "hours": 2.7174306974808373
+  },
+  {
+   "step": 15000,
+   "tokens": 122880000,
+   "train_bpc": 1.6739837156070652,
+   "valid_bpc": 1.732752339425797,
+   "hours": 2.9095535764429306
+  },
+  {
+   "step": 16000,
+   "tokens": 131072000,
+   "train_bpc": 1.668245287271946,
+   "valid_bpc": 1.726040216006362,
+   "hours": 3.1029070887300705
+  },
+  {
+   "step": 17000,
+   "tokens": 139264000,
+   "train_bpc": 1.6571743974548867,
+   "valid_bpc": 1.7094735554855482,
+   "hours": 3.2964696364270316
+  },
+  {
+   "step": 18000,
+   "tokens": 147456000,
+   "train_bpc": 1.641920478788282,
+   "valid_bpc": 1.7096429291595976,
+   "hours": 3.489737066825231
+  },
+  {
+   "step": 19000,
+   "tokens": 155648000,
+   "train_bpc": 1.6391779986361432,
+   "valid_bpc": 1.6965915149104,
+   "hours": 3.683607403702206
+  },
+  {
+   "step": 20000,
+   "tokens": 163840000,
+   "train_bpc": 1.625872164432132,
+   "valid_bpc": 1.6863698756812755,
+   "hours": 3.8767449278301664
+  },
+  {
+   "step": 20704,
+   "tokens": 169607168,
+   "train_bpc": 1.6257172469952998,
+   "valid_bpc": 1.6831200674330007,
+   "hours": 4.017368002533913
   }
  ],
  "prime": [
@@ -233,6 +303,6 @@
   110,
   101
  ],
- "sample": " and the control of the control of the control of the control of the control of the control of the control of the control on of the control of the control of the control of the control of the control of the control of the control.     The control of the co",
- "seconds": 16116.2
+ "sample": " the [[computer system]] of the [[computer system]] and [[computer system]].  The computer system is a [[computer system]] of the [[computer system]] of the [[computer system]] and the [[computer system]] of the [[computer system]] and the [[computer syste",
+ "seconds": 15223.0
 }
